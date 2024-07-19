@@ -8,34 +8,34 @@ class Program
         // Create instances of vehicles
         Car car = new Car
         {
-            Model = "Civic",
-            Manufacturer = "Honda",
-            Year = 2020,
-            RentalPrice = 50m,
+            Model = "Model S",
+            Manufacturer = "Tesla",
+            Year = 2022,
+            RentalPrice = 100m,
             Seats = 5,
-            EngineType = "V4",
+            EngineType = "Electric",
             Transmission = "Automatic",
             Convertible = false
         };
 
         Truck truck = new Truck
         {
-            Model = "F-150",
-            Manufacturer = "Ford",
-            Year = 2019,
-            RentalPrice = 80m,
-            Capacity = 5,
+            Model = "Ram 1500",
+            Manufacturer = "Dodge",
+            Year = 2021,
+            RentalPrice = 120m,
+            Capacity = 6,
             TruckType = "Pickup",
             FourWheelDrive = true
         };
 
         Motorcycle motorcycle = new Motorcycle
         {
-            Model = "Ninja",
-            Manufacturer = "Kawasaki",
-            Year = 2021,
-            RentalPrice = 40m,
-            EngineCapacity = 600,
+            Model = "Street Triple",
+            Manufacturer = "Triumph",
+            Year = 2023,
+            RentalPrice = 70m,
+            EngineCapacity = 765,
             FuelType = "Petrol",
             HasFairing = true
         };
@@ -53,13 +53,13 @@ class Program
         rentalAgency.DisplayFleet();
 
         // Rent a vehicle
-        rentalAgency.RentVehicle(car, 3);
+        rentalAgency.RentVehicle(truck, 5);
 
         // Display total revenue
         Console.WriteLine($"Total Revenue: {rentalAgency.TotalRevenue:C}");
 
         // Display the fleet after renting a vehicle
-        Console.WriteLine("Fleet Details After Renting a Car:");
+        Console.WriteLine("Fleet Details After Renting a Truck:");
         rentalAgency.DisplayFleet();
     }
 }
