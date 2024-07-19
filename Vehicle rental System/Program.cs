@@ -8,36 +8,36 @@ class Program
         // Create instances of vehicles
         Car car = new Car
         {
-            Model = "Model S",
-            Manufacturer = "Tesla",
+            Model = "Altroz",
+            Manufacturer = "Tata",
             Year = 2022,
-            RentalPrice = 100m,
+            RentalPrice = 30m,
             Seats = 5,
-            EngineType = "Electric",
-            Transmission = "Automatic",
+            EngineType = "Petrol",
+            Transmission = "Manual",
             Convertible = false
         };
 
         Truck truck = new Truck
         {
-            Model = "Ram 1500",
-            Manufacturer = "Dodge",
+            Model = "Ace",
+            Manufacturer = "Tata",
             Year = 2021,
-            RentalPrice = 120m,
-            Capacity = 6,
-            TruckType = "Pickup",
-            FourWheelDrive = true
+            RentalPrice = 50m,
+            Capacity = 1.5,
+            TruckType = "Mini Truck",
+            FourWheelDrive = false
         };
 
         Motorcycle motorcycle = new Motorcycle
         {
-            Model = "Street Triple",
-            Manufacturer = "Triumph",
+            Model = "Pulsar",
+            Manufacturer = "Bajaj",
             Year = 2023,
-            RentalPrice = 70m,
-            EngineCapacity = 765,
+            RentalPrice = 20m,
+            EngineCapacity = 150,
             FuelType = "Petrol",
-            HasFairing = true
+            HasFairing = false
         };
 
         // Create rental agency
@@ -53,13 +53,13 @@ class Program
         rentalAgency.DisplayFleet();
 
         // Rent a vehicle
-        rentalAgency.RentVehicle(truck, 5);
+        rentalAgency.RentVehicle(car, 7);
 
         // Display total revenue
         Console.WriteLine($"Total Revenue: {rentalAgency.TotalRevenue:C}");
 
         // Display the fleet after renting a vehicle
-        Console.WriteLine("Fleet Details After Renting a Truck:");
+        Console.WriteLine("Fleet Details After Renting a Car:");
         rentalAgency.DisplayFleet();
     }
 }
